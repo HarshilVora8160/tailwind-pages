@@ -13,7 +13,7 @@ function createData(name, calories, fat, carbs, protein) {
 
 const rows = [
   createData("Page 1", "2:16 min", "15 - 09 - 25"),
-  createData("Page 2", "2:16 min", "15 - 09 - 25"),
+  createData("Blue Chips Chicago", "2:56 min", "16 - 09 - 25"),
 ];
 
 export default function MainTable() {
