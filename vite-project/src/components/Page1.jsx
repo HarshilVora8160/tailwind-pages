@@ -143,7 +143,7 @@ const Page1 = () => {
         </div>
 
         {/* Third component */}
-        <div className="col-span-2 bg-white p-5 rounded-xl">
+        <div className="col-span-3 bg-white p-5 rounded-xl">
           {/* file and close button data */}
           <div className="flex items-center justify-between mb-3">
             <span>
@@ -223,47 +223,41 @@ const Page1 = () => {
             <ul className="flex gap-8 text-sm">
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "activity" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "activity" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("activity")}
                 >
                   Activity
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "activity" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "activity" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "comments" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "comments" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("comments")}
                 >
                   Comments
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "comments" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "comments" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "versions" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "versions" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("versions")}
                 >
                   Versions
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "versions" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "versions" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
             </ul>
@@ -271,8 +265,16 @@ const Page1 = () => {
 
           <div>
             <ul className="flex items-center" >
-              <FiberManualRecordIcon sx={{fontSize:10}} /><li>Yesterday</li>
+              <FiberManualRecordIcon sx={{ fontSize: 10 }} /><li>Yesterday</li>
             </ul>
+            <div className="flex text-[12px]" >
+              <div className="mx-1 bg-gray-400 flex flex-col h-10 w-1" ></div>
+              <span>You started edit access to <p className="text-blue-600" >Miko</p></span>
+            </div>
+            <ul className="flex items-center" >
+              <FiberManualRecordIcon sx={{ fontSize: 10 }} /><li>Yesterday</li>
+            </ul>
+            <div className="mx-1 bg-gray-400 flex flex-col h-20 w-1" ></div>
           </div>
         </div>
       </div>
