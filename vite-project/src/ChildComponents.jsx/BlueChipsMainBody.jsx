@@ -95,24 +95,42 @@ const MainBody = () => {
         </ul>
       </div>
 
-      <div className="px-10 py-5 bg-gray-100 grid grid-cols-12">
+      <div className="px-10 py-5 bg-gray-100 grid grid-cols-12 ">
         <div className="col-span-2">
-          <div className="bg-white rounded-xl">
-            <div className="p-5">
-              <div className="bg-gray-100 p-2 rounded-full w-fit mb-5">
-                <ThumbUpIcon />
+          <div className="col-span-2 bg-gray-300 p-3">
+            <div className="bg-gray-600 rounded-xl col-span-2">
+              <div className="p-5">
+                <div className="bg-gray-100 p-2 rounded-full w-fit mb-5">
+                  <ThumbUpIcon />
+                </div>
+              </div>
+              <div>
+                <span className="text-gray-400 text-sm flex px-5">
+                  Total Likes
+                </span>
+                <p className="text-2xl flex px-5 font-semibold pb-2">350,809</p>
               </div>
             </div>
-            <div>
-              <span className="text-gray-400 text-sm flex px-5">
-                Total Likes
-              </span>
-              <p className="text-2xl flex px-5 font-semibold pb-2">350,809</p>
+
+            <div className="bg-gray-100 rounded-xl col-span-2">
+              <div className="p-5">
+                <div className="bg-gray-100 p-2 rounded-full w-fit mb-5">
+                  <ThumbUpIcon />
+                </div>
+              </div>
+              <div>
+                <span className="text-gray-400 text-sm flex px-5">
+                  Total Likes
+                </span>
+                <p className="text-2xl flex px-5 font-semibold pb-2">350,809</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className="col-span-2">
-            <div className="bg-white rounded-xl">
+        <div className="col-span-8">
+          <div className="col-span-4 bg-gray-300 p-3">
+            <div className="bg-gray-600 rounded-xl col-span-2">
               <div className="p-5">
                 <div className="bg-gray-100 p-2 rounded-full w-fit mb-5">
                   <ThumbUpIcon />
