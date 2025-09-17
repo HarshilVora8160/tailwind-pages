@@ -13,7 +13,7 @@ function createData(name, calories, fat, carbs) {
 }
 
 const rows = [
-  createData("Page 1", "2:16 min", "15 - 09 - 25", "page-1"),
+  createData("Mine cloud", "2:16 min", "15 - 09 - 25", "page-1"),
   createData("Blue Chips Chicago", "2:56 min", "16 - 09 - 25", "blue-chips-page-2"),
 ];
 
