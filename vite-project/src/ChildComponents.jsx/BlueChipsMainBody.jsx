@@ -3,20 +3,68 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useState } from "react";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
-import CampaignIcon from '@mui/icons-material/Campaign';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import MaleIcon from "@mui/icons-material/Male";
+import FemaleIcon from "@mui/icons-material/Female";
 
 const MainBody = () => {
   const [data, setData] = useState("tiktok");
 
   const actionsData = [
     { icons: <ThumbUpIcon />, title: "Total Likes", points: "350,809" },
-    { icons: <MarkUnreadChatAltIcon />, title: "Total Comments", points: "186,072" },
+    {
+      icons: <MarkUnreadChatAltIcon />,
+      title: "Total Comments",
+      points: "186,072",
+    },
     { icons: <CampaignIcon />, title: "Total Shares", points: "120,042" },
-    { icons: <VisibilityOutlinedIcon />, title: "Enggangement", points: "48,07%" },
-  ]
+    {
+      icons: <VisibilityOutlinedIcon />,
+      title: "Enggangement",
+      points: "48,07%",
+    },
+  ];
+
+  const influencersData = [
+    {
+      imagePath:
+        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?cs=srgb&dl=pexels-italo-melo-881954-2379004.jpg&fm=jpg",
+      influencerName: "Malik Wiwaho",
+      projects: 23,
+      followers: "1,620,201",
+    },
+    {
+      imagePath:
+        "https://t4.ftcdn.net/jpg/02/24/86/95/360_F_224869519_aRaeLneqALfPNBzg0xxMZXghtvBXkfIA.jpg",
+      influencerName: "Nancy Aulia",
+      projects: 34,
+      followers: "1,224,820",
+    },
+    {
+      imagePath:
+        "https://static.vecteezy.com/system/resources/thumbnails/005/346/410/small_2x/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated-light-gray-studio-background-photo.jpg",
+      influencerName: "Natasha VIresta",
+      projects: 12,
+      followers: "1,100,491",
+    },
+    {
+      imagePath:
+        "https://media.istockphoto.com/id/870079374/photo/mmm-nah.jpg?s=612x612&w=0&k=20&c=BvTD1tE2JMzb8_vZdswqdM_lwDxUUiSKKrT6g8AEs7s=",
+      influencerName: "Wilona Hamda",
+      projects: 8,
+      followers: "927,421",
+    },
+    {
+      imagePath:
+        "https://media.istockphoto.com/id/1359149467/photo/shot-of-a-handsome-young-man-standing-alone-and-stretching-during-his-outdoor-workout.jpg?s=612x612&w=0&k=20&c=bCwqY95KICwmFZKRgbc9yd9O-0Ra1oHrhv6vYe6Weh8=",
+      influencerName: "Rava Nanda",
+      projects: 10,
+      followers: "827,810",
+    },
+  ];
 
   return (
     <div>
@@ -62,8 +110,9 @@ const MainBody = () => {
         <ul className="flex gap-8 text-sm">
           <div className="flex flex-col gap-1">
             <li
-              className={`${data === "tiktok" ? "text-black" : "text-gray-400"
-                }  flex justify-center`}
+              className={`${
+                data === "tiktok" ? "text-black" : "text-gray-400"
+              }  flex justify-center`}
               onClick={() => setData("tiktok")}
             >
               Tiktok
@@ -74,28 +123,32 @@ const MainBody = () => {
           </div>
           <div className="flex flex-col gap-1">
             <li
-              className={`${data === "instagram" ? "text-black" : "text-gray-400"
-                }  flex justify-center`}
+              className={`${
+                data === "instagram" ? "text-black" : "text-gray-400"
+              }  flex justify-center`}
               onClick={() => setData("instagram")}
             >
               Instagram
             </li>
             <p
-              className={`p-[.8px] ${data === "instagram" ? "bg-blue-700" : ""
-                } `}
+              className={`p-[.8px] ${
+                data === "instagram" ? "bg-blue-700" : ""
+              } `}
             ></p>
           </div>
           <div className="flex flex-col gap-1">
             <li
-              className={`${data === "facebook" ? "text-black" : "text-gray-400"
-                }  flex justify-center`}
+              className={`${
+                data === "facebook" ? "text-black" : "text-gray-400"
+              }  flex justify-center`}
               onClick={() => setData("facebook")}
             >
               Facebook
             </li>
             <p
-              className={`p-[.8px] ${data === "facebook" ? "bg-blue-700" : ""
-                } `}
+              className={`p-[.8px] ${
+                data === "facebook" ? "bg-blue-700" : ""
+              } `}
             ></p>
           </div>
         </ul>
@@ -103,46 +156,63 @@ const MainBody = () => {
 
       <div className="px-10 py-5 bg-gray-100 grid grid-cols-12 gap-5">
         <div className="col-span-4 grid grid-cols-2 gap-4">
-          {
-            actionsData?.map((ele, idx) => {
-              return (
-                <div className="bg-white rounded-xl">
-                  <div className="p-4">
-                    <div className="bg-gray-100 p-2 rounded-full w-fit mb-4">
-                      {ele.icons}
-                    </div>
+          {actionsData?.map((ele, idx) => {
+            return (
+              <div className="bg-white rounded-xl">
+                <div className="p-4">
+                  <div className="bg-gray-100 p-2 rounded-full w-fit mb-4">
+                    {ele.icons}
                   </div>
-                  <span className="text-gray-400 text-sm flex px-5">{ele.title}</span>
-                  <span className="text-xl flex px-5 font-semibold pb-2">{ele.points}</span>
                 </div>
-              )
-            })
-          }
+                <span className="text-gray-400 text-sm flex px-5">
+                  {ele.title}
+                </span>
+                <span className="text-xl flex px-5 font-semibold pb-2">
+                  {ele.points}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
         <div className="col-span-8">
           <div className="bg-white rounded-xl grid grid-cols-12 h-full">
-            <div className="col-span-3 flex flex-col justify-between" >
+            <div className="col-span-3 flex flex-col justify-between">
               <div className="p-4">
-                <p className="text-sm text-gray-400" >Campaign Reach</p>
-                <span className="flex text-[18px] items-end gap-1 font-semibold" >12 <p className="text-sm font-medium" >Country</p></span>
+                <p className="text-sm text-gray-400">Campaign Reach</p>
+                <span className="flex text-[18px] items-end gap-1 font-semibold">
+                  12 <p className="text-sm font-medium">Country</p>
+                </span>
 
-                <span className="text-gray-400 text-sm flex mt-5">User Reached</span>
-                <span className="text-[18px] flex font-semibold pb-2 gap-1">180,807,839 <span className="text-sm font-medium flex items-end" >user</span></span>
+                <span className="text-gray-400 text-sm flex mt-5">
+                  User Reached
+                </span>
+                <span className="text-[18px] flex font-semibold pb-2 gap-1">
+                  180,807,839{" "}
+                  <span className="text-sm font-medium flex items-end">
+                    user
+                  </span>
+                </span>
 
                 <span className="text-gray-400 text-sm flex mt-5">Period</span>
-                <span className="flex text-[18px] items-end gap-1 font-semibold" >9 <p className="text-sm font-medium" >month</p></span>
+                <span className="flex text-[18px] items-end gap-1 font-semibold">
+                  9 <p className="text-sm font-medium">month</p>
+                </span>
               </div>
-              <div className="p-4" >
-                <p className="text-sm text-gray-400 mb-2" >Updated 2s ago</p>
-                <span className="flex items-center text-blue-600 text-sm" ><RestartAltIcon sx={{ fontSize: 18 }} /> Click to refresh</span>
+              <div className="p-4">
+                <p className="text-sm text-gray-400 mb-2">Updated 2s ago</p>
+                <span className="flex items-center text-blue-600 text-sm">
+                  <RestartAltIcon sx={{ fontSize: 18 }} /> Click to refresh
+                </span>
               </div>
             </div>
 
-            <div className="col-span-9 p-4" >
-              <img className="h-70 w-full" src="https://www.mapsofworld.com/maps/world-map.jpg" />
+            <div className="col-span-9 p-4">
+              <img
+                className="h-70 w-full"
+                src="https://www.mapsofworld.com/maps/world-map.jpg"
+              />
             </div>
-
           </div>
         </div>
       </div>
@@ -151,34 +221,72 @@ const MainBody = () => {
         <div className="col-span-12 grid grid-cols-3 gap-4">
           <div>
             <div className="bg-white rounded-t-xl flex justify-between py-3 px-5">
-              <span className="text-sm" >Influencer</span>
+              <span className="text-sm">Influencer</span>
               <span className="text-sm text-blue-600">+ Add Influencer</span>
             </div>
 
-            <div className="px-5 flex justify-between" >
-              <div>
-                <p className="text-[12px] text-gray-500" >NAME</p>
+            <div className="px-5 flex justify-between gap-3 my-1">
+              <div className="flex">
+                <p className="text-[12px] text-gray-500">NAME</p>
               </div>
-              <div className="flex gap-5" >
-                <p className="text-[12px] text-gray-500" >PROJECTS</p>
-                <p className="text-[12px] text-gray-500" >FOLLOWER</p>
+              <div className="flex gap-5">
+                <p className="text-[12px] text-gray-500">PROJECTS</p>
+                <p className="text-[12px] text-gray-500">FOLLOWER</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-b-xl flex py-3 px-5">
-              <div className="flex flex-row justify-between" >
-                <div><span>hasuhdfkha</span></div>
-                <div><span>hasuhdfkha</span></div>
-                {/* <div className="" >
-                  <div className="h-8 w-8" >
-                    <img className="h-full w-full object-cover rounded-full" src="https://cdn.pixabay.com/photo/2022/03/11/06/14/indian-man-7061278_640.jpg" />
+            <div className="bg-white rounded-b-xl py-3 px-5">
+              {influencersData?.map((ele, idx) => {
+                return (
+                  <div className="flex justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="h-8 w-8">
+                        <img
+                          className="h-full w-full object-cover rounded-full"
+                          src={`${ele.imagePath}`}
+                        />
+                      </div>
+                      <span className="text-sm">{ele.influencerName}</span>
+                    </div>
+
+                    <div className="flex gap-5 items-center">
+                      <p className="text-[12px] text-gray-500">
+                        {ele.projects}
+                      </p>
+                      <p className="text-[12px] text-gray-500">
+                        {ele.followers}
+                      </p>
+                    </div>
+
+                    {/* <span className="p-1 bg-green-500"  ></span> */}
                   </div>
-                  <span className="text-sm" >Influencer</span>
-                </div>
-                <div className="flex" >
-                  <p>jghgsdjfghj</p>
-                </div> */}
+                );
+              })}
+            </div>
+          </div>
+          <div className="bg-white rounded-xl py-3 px-5">
+            <span className="text-sm flex mb-5">Audience Age & Gender</span>
+
+            <div className="flex justify-between text-sm">
+              <div className="w-[50%] flex justify-center items-center gap-1 text-blue-800">
+                <MaleIcon sx={{ fontSize: 18, color: "blue" }} />
+                Male
               </div>
+              <div className="w-[50%] flex justify-center items-center gap-1 text-green-800">
+                <FemaleIcon sx={{ fontSize: 18, color: "green" }} />
+                Female
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between bg-white rounded-xl py-3 px-5">
+            <div>
+              <span className="text-sm flex mb-5">Followers Interest</span>
+            </div>
+            <div className="flex justify-center gap-5" >
+              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-orange-500 h-[0.1px] w-3" ></span> Tiktok</div>
+              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-green-500 h-[0.1px] w-3" ></span> Twitter</div>
+              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-blue-500 h-[0.1px] w-3" ></span> Facebook</div>
             </div>
           </div>
         </div>
@@ -209,7 +317,6 @@ const MainBody = () => {
           </div>
         </div> */}
       </div>
-
     </div>
   );
 };

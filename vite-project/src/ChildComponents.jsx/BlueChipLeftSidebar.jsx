@@ -16,7 +16,7 @@ const BlueChipsLeftSidebar = () => {
         <div className='bg-white h-screen' >
             <div className='px-2 border border-gray-100 rounded-md mb-2' >
                 <div className="flex gap-3 items-center my-2" >
-                    <div className='h-10 w-10 object-cover' >
+                    <div className='h-10 w-10' >
                         <img className="h-full w-full object-cover rounded-lg" src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" />
                     </div>
                     <div>

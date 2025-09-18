@@ -50,6 +50,7 @@ const Page1 = () => {
       <div className="grid grid-cols-12 px-4 gap-5">
         {/* First component */}
         <div className="col-span-2 bg-white p-4 rounded-xl flex flex-col justify-between">
+
           <div>
             <div className="flex items-center justify-between px-2 text-blue-700 bg-blue-200 text-sm py-2 rounded-md">
               <div className="flex items-center gap-2 ">
@@ -74,7 +75,8 @@ const Page1 = () => {
               <LocalOfferOutlinedIcon sx={{ fontSize: 16 }} /> Tags
             </div>
           </div>
-          <div className="flex-col">
+
+          <div className="">
             <div className="flex items-center gap-2 py-3 text-sm px-2 rounded-md ">
               <SettingsOutlinedIcon sx={{ fontSize: 16 }} /> Settings
             </div>
@@ -94,6 +96,7 @@ const Page1 = () => {
               </div>
             </div>
           </div>
+
         </div>
         {/* <div className='col-span-1' ></div> */}
 
