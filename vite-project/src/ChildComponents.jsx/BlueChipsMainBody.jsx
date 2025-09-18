@@ -284,38 +284,13 @@ const MainBody = () => {
               <span className="text-sm flex mb-5">Followers Interest</span>
             </div>
             <div className="flex justify-center gap-5" >
-              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-orange-500 h-[0.1px] w-3" ></span> Tiktok</div>
-              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-green-500 h-[0.1px] w-3" ></span> Twitter</div>
-              <div className="text-sm flex mb-5 flex items-center gap-2"><span className="p-[1px] bg-blue-500 h-[0.1px] w-3" ></span> Facebook</div>
+              <div className="text-sm flex mb-5 items-center gap-2"><span className="p-[1px] bg-orange-500 h-[0.1px] w-3" ></span> Tiktok</div>
+              <div className="text-sm flex mb-5 items-center gap-2"><span className="p-[1px] bg-green-500 h-[0.1px] w-3" ></span> Twitter</div>
+              <div className="text-sm flex mb-5 items-center gap-2"><span className="p-[1px] bg-blue-500 h-[0.1px] w-3" ></span> Facebook</div>
             </div>
           </div>
         </div>
 
-        {/* <div className="col-span-8">
-          <div className="bg-white rounded-xl grid grid-cols-12 h-full">
-            <div className="col-span-3 flex flex-col justify-between" >
-              <div className="p-4">
-                <p className="text-sm text-gray-400" >Campaign Reach</p>
-                <span className="flex text-[18px] items-end gap-1 font-semibold" >12 <p className="text-sm font-medium" >Country</p></span>
-
-                <span className="text-gray-400 text-sm flex mt-5">User Reached</span>
-                <span className="text-[18px] flex font-semibold pb-2 gap-1">180,807,839 <span className="text-sm font-medium flex items-end" >user</span></span>
-
-                <span className="text-gray-400 text-sm flex mt-5">Period</span>
-                <span className="flex text-[18px] items-end gap-1 font-semibold" >9 <p className="text-sm font-medium" >month</p></span>
-              </div>
-              <div className="p-4" >
-                <p className="text-sm text-gray-400 mb-2" >Updated 2s ago</p>
-                <span className="flex items-center text-blue-600 text-sm" ><RestartAltIcon sx={{ fontSize: 18 }} /> Click to refresh</span>
-              </div>
-            </div>
-
-            <div className="col-span-9 p-4" >
-              <img className="h-70 w-full" src="https://www.mapsofworld.com/maps/world-map.jpg" />
-            </div>
-
-          </div>
-        </div> */}
       </div>
     </div>
   );

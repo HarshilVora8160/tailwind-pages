@@ -15,9 +15,10 @@ function createData(name, calories, fat, carbs) {
 const rows = [
   createData("Mine cloud", "2:16 min", "15 - 09 - 25", "page-1"),
   createData("Blue Chips Chicago", "2:56 min", "16 - 09 - 25", "blue-chips-page-2"),
+  createData("Awsmd", "Running", "16 - 09 - 25", "awsmd"),
 ];
 
-export default function MainTable() {
+export default function AllPages() {
 
   const navigate = useNavigate();
 
