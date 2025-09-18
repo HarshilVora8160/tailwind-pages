@@ -10,7 +10,8 @@ import FolderZipIcon from "@mui/icons-material/FolderZip";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import AudioFileIcon from "@mui/icons-material/AudioFile";
 
 import DiscFullOutlinedIcon from "@mui/icons-material/DiscFullOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
@@ -44,13 +45,20 @@ const Page1 = () => {
     },
   ];
 
+  const sharingData = [
+    { imageSrc: "https://i.pravatar.cc/40?img=1", alt: "Avatar 1" },
+    { imageSrc: "https://i.pravatar.cc/40?img=2", alt: "Avatar 2" },
+    { imageSrc: "https://i.pravatar.cc/40?img=3", alt: "Avatar 3" },
+    { imageSrc: "https://i.pravatar.cc/40?img=4", alt: "Avatar 4" },
+    { imageSrc: "https://i.pravatar.cc/40?img=5", alt: "Avatar 5" },
+  ];
+
   return (
     <div className="bg-[#ECECEC] h-screen px-5 py-2">
       <Navbar />
       <div className="grid grid-cols-12 px-4 gap-5">
         {/* First component */}
         <div className="col-span-2 bg-white p-4 rounded-xl flex flex-col justify-between">
-
           <div>
             <div className="flex items-center justify-between px-2 text-blue-700 bg-blue-200 text-sm py-2 rounded-md">
               <div className="flex items-center gap-2 ">
@@ -96,13 +104,12 @@ const Page1 = () => {
               </div>
             </div>
           </div>
-
         </div>
         {/* <div className='col-span-1' ></div> */}
 
         {/* Second component */}
         <div className="col-span-7 ">
-          <div className="bg-white h-45 rounded-2xl p-4 mb-5">
+          <div className="bg-white rounded-2xl p-4 mb-5">
             <span className="pb-4 flex">Quick Access</span>
             <div className=" grid grid-cols-12 gap-3">
               {accessData?.map((ele, idx) => {
@@ -118,7 +125,7 @@ const Page1 = () => {
               })}
             </div>
           </div>
-          <div className="bg-white rounded-2xl p-4 h-auto">
+          <div className="bg-white rounded-2xl p-4 h-[75%]">
             <div className="flex justify-between items-center">
               <div>
                 <span className="text-sm text-gray-500">
@@ -189,32 +196,15 @@ const Page1 = () => {
 
           <div className="flex items-center mb-5">
             {/* <!-- Avatar 1 --> */}
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white -ml-2 first:ml-0"
-              src="https://i.pravatar.cc/40?img=1"
-              alt="Avatar 1"
-            />
-
-            {/* <!-- Avatar 2 --> */}
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white -ml-2"
-              src="https://i.pravatar.cc/40?img=2"
-              alt="Avatar 2"
-            />
-
-            {/* <!-- Avatar 3 --> */}
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white -ml-2"
-              src="https://i.pravatar.cc/40?img=3"
-              alt="Avatar 3"
-            />
-
-            {/* <!-- Avatar 4 --> */}
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white -ml-2"
-              src="https://i.pravatar.cc/40?img=4"
-              alt="Avatar 4"
-            />
+            {sharingData?.map((ele, idx) => {
+              return (
+                <img
+                  className="w-10 h-10 rounded-full border-2 border-white -ml-2 first:ml-0"
+                  src={ele.imageSrc}
+                  alt={ele.alt}
+                />
+              );
+            })}
 
             {/* <!-- "+3" indicator --> */}
             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 text-sm font-medium -ml-2 border-2 border-white">
@@ -226,58 +216,197 @@ const Page1 = () => {
             <ul className="flex gap-8 text-sm">
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${data === "activity" ? "text-black" : "text-gray-400"
-                    }  flex justify-center`}
+                  className={`font-semibold ${
+                    data === "activity" ? "text-black" : "text-gray-400"
+                  }  flex justify-center`}
                   onClick={() => setData("activity")}
                 >
                   Activity
                 </li>
                 <p
-                  className={`p-[.8px] ${data === "activity" ? "bg-blue-700" : ""
-                    } `}
+                  className={`p-[.8px] ${
+                    data === "activity" ? "bg-blue-700" : ""
+                  } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${data === "comments" ? "text-black" : "text-gray-400"
-                    }  flex justify-center`}
+                  className={`font-semibold ${
+                    data === "comments" ? "text-black" : "text-gray-400"
+                  }  flex justify-center`}
                   onClick={() => setData("comments")}
                 >
                   Comments
                 </li>
                 <p
-                  className={`p-[.8px] ${data === "comments" ? "bg-blue-700" : ""
-                    } `}
+                  className={`p-[.8px] ${
+                    data === "comments" ? "bg-blue-700" : ""
+                  } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${data === "versions" ? "text-black" : "text-gray-400"
-                    }  flex justify-center`}
+                  className={`font-semibold ${
+                    data === "versions" ? "text-black" : "text-gray-400"
+                  }  flex justify-center`}
                   onClick={() => setData("versions")}
                 >
                   Versions
                 </li>
                 <p
-                  className={`p-[.8px] ${data === "versions" ? "bg-blue-700" : ""
-                    } `}
+                  className={`p-[.8px] ${
+                    data === "versions" ? "bg-blue-700" : ""
+                  } `}
                 ></p>
               </div>
             </ul>
           </div>
 
           <div>
-            <ul className="flex items-center" >
-              <FiberManualRecordIcon sx={{ fontSize: 10 }} /><li>Yesterday</li>
+            {/* 1 Activity */}
+
+            <ul className="flex items-center gap-2 mt-5">
+              <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
+              <li  className="text-gray-500 text-[12px]">Yesterday</li>
             </ul>
-            <div className="flex text-[12px]" >
-              <div className="mx-1 bg-gray-400 flex flex-col h-10 w-1" ></div>
-              <span>You started edit access to <p className="text-blue-600" >Miko</p></span>
+            <div className="flex text-[12px]">
+              <div className="mx-1 bg-blue-600 flex flex-col h-13 w-[2px]"></div>
+              <div className="flex items-center gap-1 m-2">
+                <div className="flex">
+                  {/* <!-- Avatar 1 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+
+                  {/* <!-- Avatar 2 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2"
+                    src="https://i.pravatar.cc/40?img=2"
+                    alt="Avatar 2"
+                  />
+                </div>
+                <div>
+                  You started edit access to{" "}
+                  <p className="text-blue-600 font-semibold">Miko</p>
+                </div>
+              </div>
             </div>
-            <ul className="flex items-center" >
-              <FiberManualRecordIcon sx={{ fontSize: 10 }} /><li>Yesterday</li>
+
+            {/* 2 Activity */}
+            <ul className="flex items-center gap-2 text-sm">
+              <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
+              <li className="text-gray-500 text-[12px]">Yesterday</li>
             </ul>
-            <div className="mx-1 bg-gray-400 flex flex-col h-20 w-1" ></div>
+            <div className="flex text-[12px]">
+              <div className="mx-1 bg-blue-600 flex flex-col h-13 w-[2px]"></div>
+              <div className="flex items-center gap-1 m-2">
+                <div className="flex">
+                  {/* <!-- Avatar 1 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+
+                  {/* <!-- Avatar 2 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2"
+                    src="https://i.pravatar.cc/40?img=3"
+                    alt="Avatar 2"
+                  />
+                </div>
+                <div>
+                  You started edit access to{" "}
+                  <p className="text-blue-600 font-semibold">Ashley</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 3 Activity */}
+            <ul className="flex items-center gap-2 text-sm">
+              <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
+              <li className="text-gray-500 text-[12px]">Apr 1, 2022</li>
+            </ul>
+            <div className="flex text-[12px]">
+              <div className="mx-1 bg-blue-600 flex flex-col h-15 w-[2px]"></div>
+              <div className="flex items-center gap-1 m-2">
+                <div className="flex">
+                  {/* <!-- Avatar 1 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+                </div>
+                <div>
+                  You changed{" "}
+                  <span className="text-blue-500">Maszeh.glyph</span>{" "}
+                  <div className="flex items-center">
+                    <p className="text-blue-600 font-semibold">
+                      <AudioFileIcon />
+                    </p>
+                    <p className="ont-semibold">Maszeh.glyph</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              {/* 4 Activity */}
+            <ul className="flex items-center gap-2 text-sm">
+              <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
+              <li className="text-gray-500 text-[12px]">Feb 21, 2022</li>
+            </ul>
+            <div className="flex text-[12px]">
+              <div className="mx-1 bg-blue-600 flex flex-col h-17 w-[2px]"></div>
+              <div className="flex items-center gap-1 m-2">
+                <div className="flex">
+                  {/* <!-- Avatar 1 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+                </div>
+                <div>
+                  You added tag{" "}
+                  <div className="flex items-center gap-2 mt-2">
+                    <button className="py-1 px-2 bg-blue-100 rounded-sm font-semibold text-blue-800" >Work</button>
+                    <button className="py-1 px-2 bg-blue-100 rounded-sm font-semibold text-blue-800" >+2</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 5 Activity */}
+            <ul className="flex items-center gap-2 text-sm">
+              <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
+              <li className="text-gray-500 text-[12px]" >Feb 16, 2022</li>
+            </ul>
+            <div className="flex text-[12px]">
+              <div className="mx-1 bg-blue-600 flex flex-col h-13 w-[2px]"></div>
+              <div className="flex items-center gap-1 m-2">
+                <div className="flex">
+                  {/* <!-- Avatar 1 --> */}
+                  <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+                   <img
+                    className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="Avatar 1"
+                  />
+                </div>
+                <div>
+                  You change edit to view 
+                  <p>access to <span className="text-blue-800 font-semibold" >Nolan</span></p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
