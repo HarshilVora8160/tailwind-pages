@@ -1,3 +1,4 @@
+import FinanceProduct from './ChildComponents.jsx/Page4/FinanceProduct';
 import Awsmd from './components/Awsmd';
 import BlueChips from './components/BlueChips';
 import AllPages from './components/HomeDataTable';
@@ -12,6 +13,7 @@ function App() {
         <Route path='/page-1' element={<Page1 />} /> // 2:16 min
         <Route path='/blue-chips-page-2' element={<BlueChips />} /> // 2:16 min
         <Route path='/awsmd' element={<Awsmd />} />
+        <Route path='/finance-product' element={<FinanceProduct />} />
       </Routes>
     </BrowserRouter>
   )
