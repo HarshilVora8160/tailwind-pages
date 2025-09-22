@@ -15,8 +15,8 @@ import AudioFileIcon from "@mui/icons-material/AudioFile";
 
 import DiscFullOutlinedIcon from "@mui/icons-material/DiscFullOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
-import BasicTable from "./MuiTable";
-import Navbar from "./Navbar";
+import BasicTable from "../../components/MuiTable";
+import Navbar from "../../components/Navbar";
 import { useState } from "react";
 
 const Page1 = () => {
@@ -58,7 +58,7 @@ const Page1 = () => {
       <Navbar />
       <div className="grid grid-cols-12 px-4 gap-5">
         {/* First component */}
-        <div className="col-span-2 bg-white p-4 rounded-xl flex flex-col justify-between">
+        <div className="col-span-5 md:col-span-4 xl:col-span-2 bg-white p-4 rounded-xl flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between px-2 text-blue-700 bg-blue-200 text-sm py-2 rounded-md">
               <div className="flex items-center gap-2 ">
@@ -105,11 +105,27 @@ const Page1 = () => {
             </div>
           </div>
         </div>
+        <div className="col-span-7 md:col-span-8 bg-white rounded-2xl p-4 mb-5 xl:hidden h-fit">
+          <span className="pb-4 flex">Quick Access</span>
+            <div className="grid grid-cols-12 gap-3">
+              {accessData?.map((ele, idx) => {
+                return (
+                  <div className="col-span-12 sm:col-span-9 md:col-span-6 border rounded-2xl border-gray-300 p-3">
+                    <span>{ele.fileImage}</span>
+                    <div className="text-[12px] py-1">{ele.title}</div>
+                    <div className="text-[12px] text-gray-400">
+                      {ele.description}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+        </div>
         {/* <div className='col-span-1' ></div> */}
 
         {/* Second component */}
-        <div className="col-span-7 ">
-          <div className="bg-white rounded-2xl p-4 mb-5">
+        <div className="col-span-9 xl:col-span-7">
+          <div className="bg-white rounded-2xl p-4 mb-5 hidden xl:block">
             <span className="pb-4 flex">Quick Access</span>
             <div className=" grid grid-cols-12 gap-3">
               {accessData?.map((ele, idx) => {
@@ -125,7 +141,7 @@ const Page1 = () => {
               })}
             </div>
           </div>
-          <div className="bg-white rounded-2xl p-4 h-[75%]">
+          <div className="grid grid-cols-1 bg-white rounded-2xl p-4 md:h-[75%]">
             <div className="flex justify-between items-center">
               <div>
                 <span className="text-sm text-gray-500">
@@ -153,7 +169,7 @@ const Page1 = () => {
         </div>
 
         {/* Third component */}
-        <div className="col-span-3 bg-white p-5 rounded-xl">
+        <div className="col-span-12 sm:col-span-11 md:col-span-10 xl:col-span-3 bg-white p-5 rounded-xl">
           {/* file and close button data */}
           <div className="flex items-center justify-between mb-3">
             <span>
@@ -216,47 +232,41 @@ const Page1 = () => {
             <ul className="flex gap-8 text-sm">
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "activity" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "activity" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("activity")}
                 >
                   Activity
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "activity" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "activity" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "comments" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "comments" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("comments")}
                 >
                   Comments
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "comments" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "comments" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
               <div className="flex flex-col gap-2">
                 <li
-                  className={`font-semibold ${
-                    data === "versions" ? "text-black" : "text-gray-400"
-                  }  flex justify-center`}
+                  className={`font-semibold ${data === "versions" ? "text-black" : "text-gray-400"
+                    }  flex justify-center`}
                   onClick={() => setData("versions")}
                 >
                   Versions
                 </li>
                 <p
-                  className={`p-[.8px] ${
-                    data === "versions" ? "bg-blue-700" : ""
-                  } `}
+                  className={`p-[.8px] ${data === "versions" ? "bg-blue-700" : ""
+                    } `}
                 ></p>
               </div>
             </ul>
@@ -267,7 +277,7 @@ const Page1 = () => {
 
             <ul className="flex items-center gap-2 mt-5">
               <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
-              <li  className="text-gray-500 text-[12px]">Yesterday</li>
+              <li className="text-gray-500 text-[12px]">Yesterday</li>
             </ul>
             <div className="flex text-[12px]">
               <div className="mx-1 bg-blue-600 flex flex-col h-13 w-[2px]"></div>
@@ -353,7 +363,7 @@ const Page1 = () => {
               </div>
             </div>
 
-              {/* 4 Activity */}
+            {/* 4 Activity */}
             <ul className="flex items-center gap-2 text-sm">
               <FiberManualRecordIcon sx={{ fontSize: 10, color: "blue" }} />
               <li className="text-gray-500 text-[12px]">Feb 21, 2022</li>
@@ -394,14 +404,14 @@ const Page1 = () => {
                     src="https://i.pravatar.cc/40?img=1"
                     alt="Avatar 1"
                   />
-                   <img
+                  <img
                     className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0"
                     src="https://i.pravatar.cc/40?img=1"
                     alt="Avatar 1"
                   />
                 </div>
                 <div>
-                  You change edit to view 
+                  You change edit to view
                   <p>access to <span className="text-blue-800 font-semibold" >Nolan</span></p>
                 </div>
               </div>

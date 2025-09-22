@@ -2,7 +2,7 @@ import FinanceProduct from './ChildComponents.jsx/Page4/FinanceProduct';
 import Awsmd from './components/Awsmd';
 import BlueChips from './components/BlueChips';
 import AllPages from './components/HomeDataTable';
-import Page1 from './components/Page1';
+import Page1 from './ChildComponents.jsx/Page1/Page1';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
