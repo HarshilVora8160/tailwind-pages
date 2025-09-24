@@ -105,41 +105,21 @@ const Page1 = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-7 md:col-span-8 bg-white rounded-2xl p-4 mb-5 xl:hidden h-fit">
-          <span className="pb-4 flex">Quick Access</span>
-            <div className="grid grid-cols-12 gap-3">
-              {accessData?.map((ele, idx) => {
-                return (
-                  <div className="col-span-12 sm:col-span-9 md:col-span-6 border rounded-2xl border-gray-300 p-3">
-                    <span>{ele.fileImage}</span>
-                    <div className="text-[12px] py-1">{ele.title}</div>
-                    <div className="text-[12px] text-gray-400">
-                      {ele.description}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-        </div>
-        {/* <div className='col-span-1' ></div> */}
 
-        {/* Second component */}
-        <div className="col-span-9 xl:col-span-7">
-          <div className="bg-white rounded-2xl p-4 mb-5 hidden xl:block">
-            <span className="pb-4 flex">Quick Access</span>
-            <div className=" grid grid-cols-12 gap-3">
-              {accessData?.map((ele, idx) => {
-                return (
-                  <div className="col-span-3 border rounded-2xl border-gray-300 p-3">
-                    <span>{ele.fileImage}</span>
-                    <div className="text-[12px] py-1">{ele.title}</div>
-                    <div className="text-[12px] text-gray-400">
-                      {ele.description}
-                    </div>
+        <div className="col-span-7 md:col-span-8 xl:col-span-7 bg-white rounded-2xl p-4 mb-5 h-fit">
+          <span className="pb-4 flex">Quick Access</span>
+          <div className="grid grid-cols-12 gap-3">
+            {accessData?.map((ele, idx) => {
+              return (
+                <div className="col-span-12 sm:col-span-9 md:col-span-6 xl:col-span-3 border rounded-2xl border-gray-300 p-3">
+                  <span>{ele.fileImage}</span>
+                  <div className="text-[12px] py-1">{ele.title}</div>
+                  <div className="text-[12px] text-gray-400">
+                    {ele.description}
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
           <div className="grid grid-cols-1 bg-white rounded-2xl p-4 md:h-[75%]">
             <div className="flex justify-between items-center">
@@ -168,7 +148,6 @@ const Page1 = () => {
           </div>
         </div>
 
-        {/* Third component */}
         <div className="col-span-12 sm:col-span-11 md:col-span-10 xl:col-span-3 bg-white p-5 rounded-xl">
           {/* file and close button data */}
           <div className="flex items-center justify-between mb-3">
@@ -419,6 +398,55 @@ const Page1 = () => {
 
           </div>
         </div>
+        {/* <div className='col-span-1' ></div> */}
+
+        {/* Second component */}
+        <div className="col-span-9 xl:col-span-7">
+          {/* <div className="bg-white rounded-2xl p-4 mb-5 hidden xl:block">
+            <span className="pb-4 flex">Quick Access</span>
+            <div className=" grid grid-cols-12 gap-3">
+              {accessData?.map((ele, idx) => {
+                return (
+                  <div className="col-span-3 border rounded-2xl border-gray-300 p-3">
+                    <span>{ele.fileImage}</span>
+                    <div className="text-[12px] py-1">{ele.title}</div>
+                    <div className="text-[12px] text-gray-400">
+                      {ele.description}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 bg-white rounded-2xl p-4 md:h-[75%]">
+            <div className="flex justify-between items-center">
+              <div>
+                <span className="text-sm text-gray-500">
+                  Home <ChevronRightOutlinedIcon sx={{ fontSize: 18 }} />
+                </span>
+                <span className="text-sm text-gray-500">
+                  Concept Font{" "}
+                  <ChevronRightOutlinedIcon sx={{ fontSize: 18 }} />
+                </span>
+                <span className="text-sm">Maszeh</span>
+              </div>
+              <div className="flex items-center gap-5">
+                <span>
+                  <WidgetsIcon />
+                </span>
+                <button className="flex items-center text-white text-sm bg-blue-700 h-8 gap-2 px-3 rounded-md">
+                  <AddIcon sx={{ fontSize: 18 }} /> Add New
+                </button>
+              </div>
+            </div>
+            <div className="my-5">
+              <BasicTable />
+            </div>
+          </div> */}
+        </div>
+
+        {/* Third component */}
+        
       </div>
     </div>
   );
