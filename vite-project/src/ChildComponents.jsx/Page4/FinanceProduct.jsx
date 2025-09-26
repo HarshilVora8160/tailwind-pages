@@ -82,7 +82,7 @@ const FinanceProduct = () => {
                     </div> */}
                 </div>
                 <div className="bg-gray-500 col-span-6 row-span-3 rounded-3xl">02</div>
-
+                
 
                 <div className="bg-white col-span-6 row-span-9 rounded-4xl p-7">
                     <div className='h-full grid grid-cols-2' >
