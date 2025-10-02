@@ -4,6 +4,7 @@ import BlueChips from './components/BlueChips';
 import AllPages from './components/HomeDataTable';
 import Page1 from './ChildComponents.jsx/Page1/Page1';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScriptlyAI from './ChildComponents.jsx/Page5/ScriptlyAI';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/blue-chips-page-2' element={<BlueChips />} /> // 2:16 min
         <Route path='/awsmd' element={<Awsmd />} />
         <Route path='/finance-product' element={<FinanceProduct />} />
+        <Route path='/scriptly-ai' element={<ScriptlyAI />} />
       </Routes>
     </BrowserRouter>
   )
